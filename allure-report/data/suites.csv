@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","3297","@smoke Child window","","2026-07-11","passed","2026-07-11","","UIControls.spec.js","",""
+"","5512","@smoke End to END Purchase Order","","2026-07-11","passed","2026-07-11","","Ecommerce.spec.js","",""
+"","3744","@smoke File to file comparison","","2026-07-11","passed","2026-07-11","","MoreValidation.spec.js","",""
+"","5083","@smoke Pop up valdation","","2026-07-11","passed","2026-07-11","","MoreValidation.spec.js","",""
