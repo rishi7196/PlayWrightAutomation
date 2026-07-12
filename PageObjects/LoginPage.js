@@ -5,7 +5,8 @@ class LoginPage {
         this.signInButton = page.locator("[value='Login']");
         this.password = page.locator("#userPassword");
         this.userName = page.locator("#userEmail");   
-        this.page.waitForLoadState('networkidle');    
+        this.page.waitForLoadState('networkidle'); 
+        
     }
 
     async GoTo() {

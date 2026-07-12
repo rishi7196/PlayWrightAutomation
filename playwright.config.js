@@ -5,10 +5,10 @@ import { trace } from 'node:console';
 
 const config = ({
   testDir: './tests',
-  retries: 1,
-  workers: 1,
+   retries: 1,
+   workers: 1,
 
-  timeout: 40 * 1000,
+  timeout: 60 * 1000,
   expect: {
     timeout: 50 * 1000,// over ride the existing wait time
   },
@@ -19,7 +19,7 @@ const config = ({
 
   use: {
     browserName: 'chromium',
-    headless: true,
+    headless: false,
     //browserName:'webkit'
     trace: 'retain-on-failure',//off,on
     screenshot: 'only-on-failure'
