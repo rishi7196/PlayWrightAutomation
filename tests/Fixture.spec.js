@@ -13,7 +13,7 @@ customtest('PageObject Purchase Order ', async ({ page, testDataForOrder }) => {
 
    const dashboardpage = poManger.getDashboardPage();
    await dashboardpage.searchProductAddCart(testDataForOrder.productName)
-   await dashboardpage.NavigateToCart();
+   await dashboardpage.navigateToCart();
 
 
   
