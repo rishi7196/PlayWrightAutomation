@@ -16,13 +16,12 @@ Given('a login to Ecommerce Application with {string} and {string}', async funct
     const loginPage = this.poManager.getLoginPage();
     await loginPage.GoTo();
     await loginPage.validateLogin(username, password);
-    await this.page.waitForSelector('.card-body', { state: 'visible' });
 });
 
 When('Add {string} to Cart', async function (productName) {
-     await page.locator(".card-body").filter({hasText:"ZARA COAT 3"})
-   .getByRole("button",{name:"Add to Cart"}).click(); 
-   await page.getByRole("listitem").getByRole('button',{name:"Cart"}).click();
+    this.dashboardPage = this.poManager.getDashboardPage();
+    await this.dashboardPage.searchProductAddCart(productName);
+    await this.dashboardPage.navigateToCart();
 });
 
 Then('Verify {string} is displayed in the cart', async function (productName) {
