@@ -3,8 +3,6 @@ const { url } = require('node:inspector');
 
 const loginPalyod = { userEmail: "rishi7196@gmail.com", userPassword: "rishi12345" }
 let token;
-
-
 test.beforeAll(async () => {
 
    const apiContext = await request.newContext()
@@ -20,11 +18,6 @@ test.beforeAll(async () => {
    token = loginResponseJson.token;
    console.log(token)
 });
-
-
-
-
-
 
 test('Client App login', async ({ page }) => {
 
