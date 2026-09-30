@@ -21,16 +21,15 @@ test.beforeAll(async () => {
 
 test('Client App login', async ({ page }) => {
 
-   page.addInitScript(value=>
-   {
-      window.localStorage.setItem('token',value)
-   },  token);
+   page.addInitScript(value => {
+      window.localStorage.setItem('token', value)
+   }, token);
 
    // const productName = 'ZARA COAT 3';
    // const username = "rishi7196@gmail.com";
    // const password = "rishi12345";
-    const products = page.locator(".card-body");
-    await page.goto("https://rahulshettyacademy.com/client");
+   const products = page.locator(".card-body");
+   await page.goto("https://rahulshettyacademy.com/client");
    // await page.getByPlaceholder("email@example.com").fill(username);
    // await page.getByPlaceholder("enter your passsword").fill(password);
    // await page.getByRole('button', { name: "Login" }).click();
