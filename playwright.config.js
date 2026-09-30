@@ -1,33 +1,22 @@
 // @ts-check
-import { defineConfig, devices } from '@playwright/test';
-import { worker, workers } from 'node:cluster';
-import { trace } from 'node:console';
+const { defineConfig } = require('@playwright/test');
 
-const config = ({
+module.exports = defineConfig({
   testDir: './tests',
-   retries: 1,
-   workers: 1,
-
+  retries: 1,
+  workers: 1,
   timeout: 60 * 1000,
   expect: {
-    timeout: 50 * 1000,// over ride the existing wait time
+    timeout: 50 * 1000,
   },
-
   reporter: 'html',
-
-
-
   use: {
+    actionTimeout: 10 * 1000,
+    navigationTimeout: 10 * 1000,
     browserName: 'chromium',
     headless: true,
-    //browserName:'webkit'
-    trace: 'retain-on-failure',//off,on
-    screenshot: 'only-on-failure'
-
-
+    trace: 'retain-on-failure',
+    screenshot: 'only-on-failure',
   },
-
-
 });
-module.exports = config
 
