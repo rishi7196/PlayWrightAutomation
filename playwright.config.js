@@ -1,7 +1,7 @@
 // @ts-check
 const { defineConfig } = require('@playwright/test');
 
-module.exports = defineConfig({
+const config = ({
   testDir: './tests',
   retries: 1,
   workers: 1,
@@ -19,4 +19,5 @@ module.exports = defineConfig({
     screenshot: 'only-on-failure',
   },
 });
+module.exports = config
 
